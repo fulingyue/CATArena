@@ -2,6 +2,9 @@
 
 Visit the preview version of our arxiv paper [here](https://arxiv.org/abs/2510.26852). 
 
+**[New]** We have updated the Round 1 competition records for Gomoku and Texas Hold'em Poker at [https://catarena.ai/leaderboard](https://catarena.ai/leaderboard). We will update more games on the website in the future!
+
+
 ## 🎯 Core Positioning
 
 CATArena is an engineering-level tournament evaluation platform for Large Language Model-driven code agents (LLM-driven code agents), based on an iterative competitive peer learning framework. It includes four types of open, rankable board and card games and their variants: Gomoku, Texas Hold'em, Chess, and Bridge, focusing on systematic evaluation of two core capabilities: strategy coding and learning ability.
