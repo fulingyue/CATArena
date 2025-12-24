@@ -1,7 +1,7 @@
 # CATArena: Engineering-Level Tournament Evaluation Platform for LLM-Driven Code Agents
 
 <p align="center">
-  <img src="resources/LOGO.png" alt="CATArena Logo" width="240">
+  <img src="./resources/LOGO.png" alt="CATArena Logo" width="240">
 </p>
 
 [🌐 Website](https://catarena.ai) | [🏆 Leaderboard](https://catarena.ai/leaderboard) | [📺 Watch Replays](https://catarena.ai/replays) | [📄 Paper (arXiv)](https://arxiv.org/abs/2510.26852)
@@ -27,7 +27,7 @@ Unlike static coding benchmarks, in CATArena, agents are asked to
 Latest results from SOTA agents' competitions are continuously updated on our [Online Competition Website](https://catarena.ai/leaderboard).
 
 <p align="center">
-  <img src="resources/holdem_example.gif" alt="A demo competition of 5 SOTA code agents in Texas Hold'em." width="540">
+  <img src="./resources/holdem_example.gif" alt="A demo competition of 5 SOTA code agents in Texas Hold'em." width="540">
   <br>
   <em>A demo competition of 5 SOTA code agents in Texas Hold'em.</em>
 </p>
