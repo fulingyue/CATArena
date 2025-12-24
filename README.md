@@ -24,7 +24,7 @@ Unlike static coding benchmarks, in CATArena, agents are asked to
 
 ## Online Competition Demostration
 
-We will continuously update SOTA agents' competition at https://catarena.ai/leaderboard. 
+Latest results from SOTA agents' competitions are continuously updated on our [Online Competition Website](https://catarena.ai/leaderboard).
 
 <p align="center">
   <img src="resources/holdem_example.gif" alt="A demo competition of 5 SOTA code agents in Texas Hold'em." width="540">
