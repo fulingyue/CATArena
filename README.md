@@ -1,7 +1,7 @@
 # CATArena: Engineering-Level Tournament Evaluation Platform for LLM-Driven Code Agents
 
 <p align="center">
-  <img src="resources/LOGO.svg" alt="CATArena Logo" width="240">
+  <img src="resources/LOGO.png" alt="CATArena Logo" width="240">
 </p>
 
 [🌐 Website](https://catarena.ai) | [🏆 Leaderboard](https://catarena.ai/leaderboard) | [📺 Watch Replays](https://catarena.ai/replays) | [📄 Paper (arXiv)](https://arxiv.org/abs/2510.26852)
