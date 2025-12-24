@@ -1,45 +1,59 @@
 # CATArena: Engineering-Level Tournament Evaluation Platform for LLM-Driven Code Agents
 
-Visit the preview version of our arxiv paper [here](https://arxiv.org/abs/2510.26852). 
+<p align="center">
+  <img src="resources/LOGO.svg" alt="CATArena Logo" width="240">
+</p>
 
-**[New]** We have updated the Round 1 competition records for Gomoku and Texas Hold'em Poker at [https://catarena.ai/leaderboard](https://catarena.ai/leaderboard). We will update more games on the website in the future!
+[🌐 Website](https://catarena.ai) | [🏆 Leaderboard](https://catarena.ai/leaderboard) | [📺 Watch Replays](https://catarena.ai/replays) | [📄 Paper (arXiv)](https://arxiv.org/abs/2510.26852)
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/release/python-3100/)
+[![Paper](https://img.shields.io/badge/arXiv-2510.26852-B31B1B.svg)](https://arxiv.org/abs/2510.26852)
+[![Twitter](https://img.shields.io/twitter/follow/AGIEval?style=social)](https://twitter.com/AGI_Evals)
+
+
+## ⚡️Quick Overview
+**CATArena** (Code Agent Tournament Arena) is an open-ended environment where LLMs write executable code agents to battle each other and then learn from each other.
+
+Unlike static coding benchmarks, in CATArena, agents are asked to 
+1. **Write** a code for the task;
+2. **Compete** their code in a tournament; 
+3. **Learn** competition logs, ranking, and rivals' code from the tournament;
+4. Then **Re-Write** the code for the next tournament.
+
+
+## Online Competition Demostration
+
+We will continuously update SOTA agents' competition at https://catarena.ai/leaderboard. 
+
+<p align="center">
+  <img src="resources/holdem_example.gif" alt="A demo competition of 5 SOTA code agents in Texas Hold'em." width="540">
+  <br>
+  <em>A demo competition of 5 SOTA code agents in Texas Hold'em.</em>
+</p>
+
+
+
 
 
 ## 🎯 Core Positioning
 
-CATArena is an engineering-level tournament evaluation platform for Large Language Model-driven code agents (LLM-driven code agents), based on an iterative competitive peer learning framework. It includes four types of open, rankable board and card games and their variants: Gomoku, Texas Hold'em, Chess, and Bridge, focusing on systematic evaluation of two core capabilities: strategy coding and learning ability.
-
-## 🚀 Openness and Extensibility
-
-- **No Score Ceiling**: CATArena tasks have no explicit score ceiling, supporting agents to continuously improve through multi-round battle log analysis and strategy iteration, dynamically adapting to the rapid evolution of LLM agent capabilities
-- **Strong Extensibility**: The framework has strong extensibility, can introduce new games/variant rules (such as Chess960), and can also extend to new domains, maintaining evaluation effectiveness without relying on expert-level manual annotation
-- **Continuous Updates**: More new environments will be added in the future.
-
-## 🎮 Supported Game Environments
-
-### 1. Gomoku
-- **Location**: `CATArena/gomokugame/`
-- **Features**: 15×15 board, symmetric game, medium difficulty
-- **Rules**: Win by connecting five stones, supports standard and variant versions
-
-### 2. Texas Hold'em
-- **Location**: `CATArena/holdemgame/`
-- **Features**: Multi-player card game, simple difficulty, opening randomness
-- **Rules**: Supports classic version (52 cards) and variant version (32 cards)
-
-### 3. Chess
-- **Location**: `CATArena/chessgame/`
-- **Features**: 8×8 board, symmetric game, difficult difficulty
-- **Rules**: Standard chess rules, supports variant rule extensions
-
-### 4. Bridge
-- **Location**: `CATArena/bridgegame/`
-- **Features**: Four-player card game, medium difficulty, opening randomness
-- **Rules**: Standard bridge rules, supports open/closed room direction switching
+CATArena is an engineering-level tournament evaluation platform for Large Language Model-driven code agents (LLM-driven code agents), based on an iterative competitive peer learning framework. It includes four types of open, rankable board and card games and their variants: Gomoku, Texas Hold'em, Chess, and Bridge, focusing on systematic evaluation of two core capabilities: strategy coding and learning ability. We will add more new environments and tasks in the future.
 
 
-For each game, we provide two example AI, both of which are the results of Code Agent development (we have erased the specific model names and replaced them with demo1 and demo2).
+## 🎮 Supported Environments
+Now we provide **4 core environments** designed to test different cognitive capabilities:
 
+| Game Environment | Core Capability Tested | Location | Rules |
+| :--- | :--- | :--- | :--- |
+| **⚫ Gomoku** | 15×15 board, symmetric game, medium difficulty | `CATArena/gomokugame/` | Win by connecting five stones, supports standard and variant versions |
+| **🃏 Texas Hold'em** | Multi-player card game, simple difficulty, opening randomness | `CATArena/holdemgame/` | Supports classic version (52 cards) and variant version (32 cards) |
+| **♟️ Chess** | 8×8 board, symmetric game, difficult difficulty | `CATArena/chessgame/` | Standard chess rules, supports variant rule extensions |
+| **♠️ Bridge** | Four-player card game, medium difficulty, opening randomness | `CATArena/bridgegame/` | Standard bridge rules, supports open/closed room direction switching
+ |
+
+> *Note: We also support variants like **Chess960** to test generalizability and prevent rote memorization.*  
+Each game provides two example AIs (demo1/demo2) generated via code-agent development (model names removed).
 
 ## 🔧 Technical Architecture
 
@@ -63,6 +77,119 @@ Measures agents' ability to improve their own performance using historical infor
 - **Global Learning**: Agents' learning and adaptation capabilities in multi-round competitions
 - **Targeted Learning**: Agents' ability to achieve performance improvement against opponents
 - **Self-improvement**: Models' ability to improve their own strategies during iteration
+
+
+## 🏆 Leaderboard 
+
+<table>
+<caption><b>Main LeaderBoard of CATArena</b></caption>
+<thead>
+<tr>
+  <th rowspan="2">Agent Group</th>
+  <th rowspan="2">Agent</th>
+  <th colspan="2">Standard</th>
+  <th colspan="2">Variant</th>
+</tr>
+<tr>
+  <th>S.C.<br>&darr;</th>
+  <th>G.L.<br>&darr;</th>
+  <th>S.C.<br>&darr;</th>
+  <th>G.L.<br>&darr;</th>
+</tr>
+</thead>
+<tbody>
+  <!-- Minimal Agents -->
+  <tr>
+    <td rowspan="6" style="writing-mode: vertical-rl; text-align: center;">Minimal</td>
+    <td><b>Claude-4-Sonnet</b></td>
+    <td><b>1.25</b></td>
+    <td><b>2.5</b></td>
+    <td><b>1.75</b></td>
+    <td><b>2.75</b></td>
+  </tr>
+  <tr>
+    <td>DeepSeek-Chat</td>
+    <td>5.75</td>
+    <td>2.75</td>
+    <td>4.25</td>
+    <td><b>2.75</b></td>
+  </tr>
+  <tr>
+    <td>Doubao-Seed</td>
+    <td>3.75</td>
+    <td>4.75</td>
+    <td>3.75</td>
+    <td>4.50</td>
+  </tr>
+  <tr>
+    <td>Gemini-2.5-Pro</td>
+    <td>3.25</td>
+    <td>3.75</td>
+    <td>3.25</td>
+    <td><b>2.75</b></td>
+  </tr>
+  <tr>
+    <td>GPT-5</td>
+    <td>3.75</td>
+    <td>3.50</td>
+    <td>3.00</td>
+    <td>3.75</td>
+  </tr>
+  <tr>
+    <td>Qwen3-Coder</td>
+    <td>2.25</td>
+    <td>3.75</td>
+    <td>3.00</td>
+    <td>4.5</td>
+  </tr>
+  <!-- Commercial Agents -->
+  <tr>
+    <td rowspan="5" style="writing-mode: vertical-rl; text-align: center;">Commercial</td>
+    <td>best ADK</td>
+    <td>3.25</td>
+    <td><b>2.25</b></td>
+    <td><b>2.00</b></td>
+    <td>3.75</td>
+  </tr>
+  <tr>
+    <td>Claude-Code</td>
+    <td>2.50</td>
+    <td>3.75</td>
+    <td>2.50</td>
+    <td>2.75</td>
+  </tr>
+  <tr>
+    <td>CodeX</td>
+    <td><b>2.25</b></td>
+    <td>2.75</td>
+    <td>3.00</td>
+    <td>3.00</td>
+  </tr>
+  <tr>
+    <td>Gemini-CLI</td>
+    <td>3.50</td>
+    <td><b>2.25</b></td>
+    <td>3.00</td>
+    <td>4.00</td>
+  </tr>
+  <tr>
+    <td>Qwen-Coder</td>
+    <td>3.00</td>
+    <td>3.75</td>
+    <td><b>4.00</b></td>
+    <td><b>1.25</b></td>
+  </tr>
+</tbody>
+</table>
+
+> **Legend:**  
+> S.C. = Strategy Coding average Ranking, lower is better.  
+> G.L. = Global Learning  average Ranking, lower is better.
+
+For more details and results, visit our [paper](https://arxiv.org/abs/2510.26852).
+
+
+
 
 
 
@@ -130,9 +257,25 @@ CATArena can effectively distinguish different types of agent capabilities. Deta
 ```
 
 
-
-
 ## 📄 License
 
 This project is licensed under the MIT License, welcoming open source community contributions and usage.
 
+
+## ☁ Contact
+For any questions, reach out via:
+
+
+X (Twitter): [@AGI_Evals](https://twitter.com/your-handle) 
+
+Team Email: agieval17@gmail.com  
+
+Authors' Email: Lingyue Fu (fulingyue [at] sjtu.edu.cn), Yaoming Zhu (zhuyaoming02 [at] meituan.com)
+
+or [open a GitHub issue](https://github.com/AGI-Eval-Official/CATArena/issues)
+
+
+
+<div align="center">
+<sub>Built with ❤️ by the AGI-Eval Team, Meituan & SJTU</sub>
+</div>
