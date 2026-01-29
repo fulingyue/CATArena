@@ -1,5 +1,4 @@
-# CATArena: Engineering-Level Tournament Evaluation Platform for LLM-Driven Code Agents
-
+# CATArena: Benchmarking Evolutionary Capabilities of LLM Agents via Iterative Tournaments
 <p align="center">
   <img src="./resources/LOGO.png" alt="CATArena Logo" width="240">
 </p>
